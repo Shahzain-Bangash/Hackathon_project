@@ -4,6 +4,14 @@ import { Josefin_Sans } from "next/font/google";
 import Header from "./components/Header/page";
 import Footer from "./components/Footer/page";
 import "./globals.css";
+import FeaturedProducts from "./components/FeatureProduct/page";
+// import ProductDisplay from "./components/LeatestProducts/page";
+import LatestProducts from "./components/LatestProducts/page";
+import TrendingProducts from "./components/TrendingProducts/page";
+import DiscountItem from "./components/DiscountItems/page";
+import TopCategories from "./components/TopCategories/page";
+import LeatestBlog from "./components/LeatestBlog/page";
+// import ShopexOffers from "./components/ShopexOffer.tsx/page";
 
 
 const josefin_Sans = Josefin_Sans({ weight: '400',subsets:["latin"]}); 
@@ -36,6 +44,12 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        <FeaturedProducts/>
+        <LatestProducts/>
+        <TrendingProducts/>
+        <DiscountItem/>
+        <TopCategories/>
+        <LeatestBlog/>
         <Footer/>
       </body>
     </html>

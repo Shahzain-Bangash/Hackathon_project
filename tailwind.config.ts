@@ -10,9 +10,11 @@ export default {
   ],
   theme: {
     screens:{
+      customsm: {min: '200px', max: '440px'},
+      smm: {min: '440px', max: '640px'},
       sm: {min: '640px', max: '768px'},
-      md: {min: '768px',max : '1020px' },
-      lg: {min: '1020px',max : '12240px' },
+      md: {min: '768px',max : '1024px' },
+      lg: {min: '1024px',max : '1280px' },
     },
     extend: {
       fontFamily: {

@@ -1,11 +1,13 @@
 // import Image from "next/image";
-import HeroSection from './components/Slide/page';
+import Navbar from './components/NavBar/page';
+import MainSection from './components/Slide/page';
 import './globals.css'
 
 export default function Home() {
   return (
     <div>
-      <HeroSection/>
+      <Navbar/>
+      <MainSection/>
     </div>
   );
 }

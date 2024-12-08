@@ -6,18 +6,18 @@ import Link from "next/link"
 
 function Footer() {
   return (
-    <div>
-        <footer className="text-gray-600 body-font bg-[#E7E4F8]">
+    <div className=''>
+        <footer className="text-gray-600 body-font ">
   <div className="container px-5 py-24 mx-auto mt-[40px]">
-    <div className="flex flex-wrap md:text-left text-center order-first">
+    <div className="flex flex-wrap md:text-left lg:text-left text-center order-first">
 
 
     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-bold text-black tracking-widest text-lg mb-3">
         Hekto
         </h2>
-        <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-          <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+        <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wwrap flex-wrap justify-center items-end md:justify-start lg:justify-start">
+          <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-4 sm:mr-4 mr-2">
             <label
               htmlFor="footer-field"
               className="leading-7 text-sm text-gray-600"
@@ -35,7 +35,7 @@ function Footer() {
             Sign-Up
           </button>
         </div>
-        <p className="text-gray-500 text-sm mt-2 md:text-left text-center">
+        <p className="text-gray-500 text-sm mt-2 md:text-left lg:text-left text-center">
         Contact Info
           <br className="lg:block hidden" />
           17 Princess Road, London, Greater London NW1 8JR, UK
@@ -114,10 +114,10 @@ function Footer() {
       
     </div>
   </div>
-  <div className="bg-[#E7E4F8]">
-    <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+  <div className="bg-[#E7E4F8] f">
+    <div className="container px-5 py-6 mx-auto flex justify-around sm:flex-row flex-row customsm:flex-col">
       
-      <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+      <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 customsm:text-[10px]">
         © 2024 Hekto —
         <a
           href="https://twitter.com/knyttneve"

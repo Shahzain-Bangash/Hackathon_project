@@ -1,78 +1,66 @@
-import React from 'react';
-import { MdOutlineEmail } from 'react-icons/md';
-import { FaPhoneVolume } from 'react-icons/fa6';
-import { FiUser } from 'react-icons/fi';
-import { FaChevronDown, FaRegHeart } from 'react-icons/fa6';
-import { LuShoppingCart } from 'react-icons/lu';
-import { Josefin_Sans } from 'next/font/google';
+import React from "react";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { FiUser } from "react-icons/fi";
+import { FaChevronDown, FaRegHeart } from "react-icons/fa6";
+import { LuShoppingCart } from "react-icons/lu";
+import { Josefin_Sans } from "next/font/google";
 
-const josefin_Sans = Josefin_Sans({ weight: '400',subsets:["latin"]});  
+const josefin_Sans = Josefin_Sans({ weight: "400", subsets: ["latin"] });
 
 const Header = () => {
-
   return (
-<div
-  className={`2xl:w-[1920px] h-[44px] w-[100%] bg-[#7E33E0] text-[#f1f1f1] flex justify-center items-center  
-  } ${josefin_Sans.className}` }>
-     <div className="w-[1177px] 2xl:w-[1177px] flex flex-col justify-center  lg:flex-row md:justify-between items-center ">
-        <div className="w-[30%] lg:w-[380px] flex items-center justify-center lg:justify-start">
-          <div className="flex items-center justify-center gap-3 mr-10 ">
-            <span className="w-4 h-4 text-[#ffffff]">
-              <MdOutlineEmail />
-            </span>
-            <h1 className="sm:w-[171px] h-[16px] font-sans font-semibold text-sm sm:text-[16px] leading-4">
-              mhhasanul@gmail.com
-            </h1>
+    <div
+      className={`w-full bg-[#7E33E0] text-[#f1f1f1] flex justify-center sm:mx-auto items-center py-2 px-4 smm:px-0  ${josefin_Sans.className}`}
+    >
+      <div className="w-full max-w-[1170px]  flex flex-wrap  justify-between px-6 customsm:px-0 items-center gap-y-3 ">
+        {/* Left Section */}
+        <div className="flex flex-row sm:flex-row customsm:mx-auto smm:mx-auto sm:mx-auto sm:items-center gap-4 sm:gap-8 ">
+          {/* Email */}
+          <div className="flex items-center gap-2">
+            <MdOutlineEmail className="w-4 h-4 text-[#ffffff]" />
+            <h1 className="text-sm customsm:text-[11px] sm:text-base font-semibold">mhhasanul@gmail.com</h1>
           </div>
-          <div className="flex items-center justify-center gap-3">
-            <span className="w-4 h-4 flex items-center justify-center">
-              <FaPhoneVolume className="w-[13.33px] h-[13.33px] text-[#ffffff]" />
-            </span>
-            <h1 className="w-[97px] h-[16px]  font-sans font-semibold text-sm sm:text-[16px] leading-4">
-              (12345)67890
-            </h1>
+
+          {/* Phone */}
+          <div className="flex items-center gap-2 sm:mx-auto ">
+            <FaPhoneVolume className="w-4 h-4 text-[#ffffff]" />
+            <h1 className="text-sm customsm:text-[11px] sm:text-base font-semibold">(12345)67890</h1>
           </div>
         </div>
-        <div className="w-[30%] lg:w-[400px] flex flex-row items-center justify-center lg:justify-end gap-2 sm:gap-4">
-          <div className=" flex flex-row items-center justify-center ">
-            <h1 className="h-[16px]  font-sans font-semibold text-sm sm:text-[16px] leading-4">
-              English
-            </h1>
-            <div className=" flex justify-center items-center mx-1 w-[16px] h-[16px] ">
-              <FaChevronDown />
-            </div>
+
+        {/* Right Section */}
+        <div className="flex flex-wrap items-center justify-end gap-4 customsm:mx-auto  smm:mx-auto sm:mx-auto ">
+          {/* Language */}
+          <div className="flex items-center gap-2">
+            <h1 className="text-sm customsm:text-[11px] sm:text-base font-semibold">English</h1>
+            <FaChevronDown className="w-4 h-4 customsm:w-3" />
           </div>
-          <div className=" flex flex-row items-center justify-center  ">
-            <h1 className="h-[16px]  font-sans font-semibold text-sm sm:text-[16px] leading-4">
-              USD
-            </h1>
-            <div className=" flex justify-center items-center  mx-1 w-[16px] h-[16px] ">
-              <FaChevronDown />
-            </div>
+
+          {/* Currency */}
+          <div className="flex items-center gap-2">
+            <h1 className="text-sm customsm:text-[11px] sm:text-base font-semibold">USD</h1>
+            <FaChevronDown className="w-4 h-4 customsm:w-3" />
           </div>
-          <div className=" flex flex-row items-center justify-center ">
-            <h1 className="h-[16px]  font-sans font-semibold text-sm sm:text-[16px] leading-4">
-              Login
-            </h1>
-            <div className=" flex justify-center items-center  mx-1 w-[16px] h-[16px] ">
-              <FiUser />
-            </div>
+
+          {/* Login */}
+          <div className="flex items-center gap-2">
+            <h1 className="text-sm customsm:text-[11px] sm:text-base font-semibold">Login</h1>
+            <FiUser className="w-4 h-4 customsm:w-3" />
           </div>
-          <div className=" flex flex-row items-center justify-center ">
-            <h1 className="h-[16px]  font-sans font-semibold text-sm sm:text-[16px] leading-4">
-              Wishlist
-            </h1>
-            <div className=" flex justify-center items-center  mx-1 w-[16px] h-[16px] ">
-              <FaRegHeart />
-            </div>
+
+          {/* Wishlist */}
+          <div className="flex items-center gap-2">
+            <h1 className="text-sm customsm:text-[11px] sm:text-base font-semibold">Wishlist</h1>
+            <FaRegHeart className="w-4 h-4 customsm:w-3" />
           </div>
-          <div>
-            <LuShoppingCart className="w-[24px] h-[24px]" />
-          </div>
+
+          {/* Shopping Cart */}
+          <LuShoppingCart className="w-6 h-6 customsm:w-4" />
         </div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default Header;
