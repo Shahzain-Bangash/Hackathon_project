@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Josefin_Sans } from "next/font/google";
+import Header from "./components/Header/page";
+import Footer from "./components/Footer/page";
 import "./globals.css";
+
+
+const josefin_Sans = Josefin_Sans({ weight: '400',subsets:["latin"]}); 
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${josefin_Sans.className}`}
       >
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
