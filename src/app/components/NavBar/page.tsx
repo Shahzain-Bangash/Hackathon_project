@@ -1,20 +1,24 @@
 "use client";
 import Link from "next/link";
-// import { useState } from "react";
+import { useState } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Navbar() {
+  const [open, setOpen] = useState(false); // Add state for open toggle
 
+  const toggleMenu = () => {
+    setOpen(!open); // Toggle open state when button is clicked
+  };
 
   return (
     <main className="border-b-2 bg-neutral-100">
-      <div className="w-full flex items-center justify-center bg-white h-[70px] border border-black">
+      <div className="w-full flex items-center justify-center bg-white h-[70px]">
         {/* all content */}
-        <div className="sm:w-full md:w-[80%] flex items-center justify-between h-[50px] border border-black">
+        <div className="sm:w-full md:w-[80%] flex items-center justify-between h-[50px] px-4">
 
           <div>
             {/* logo */}
-            <h2 className="title-font font-extrabold text-blue-950 tracking-widest text-xl ">
+            <h2 className="title-font font-extrabold text-blue-950 tracking-widest text-xl">
               Hekto
             </h2>
           </div>
@@ -48,18 +52,20 @@ function Navbar() {
           </div>
 
           <div className="flex gap-x-4 items-center">
-            {/* Search bar - hidden on small screens */}
-            <div className="hidden lg:flex w-full bg-gray-200 rounded-md items-center">
-              <input
-                className="w-full p-1 rounded-md bg-gray-200 outline-none"
-                type="search"
-                placeholder="Search"
-              />
-             <li className="fa fa-magnifying-glass" id='search'></li>
-            </div>
+  {/* Search bar visible on all screens */}
+  <div className="flex w-full bg-gray-200 rounded-sm items-center">
+    <input
+      className="w-full bg-gray-200 outline-none pl-2"
+      type="search"
+      placeholder="Search"
+    />
+    <i className="fa fa-search text-xl  bg-pink-600 px-1 py-1 text-white rounded-sm h-full w-[30px]"></i>
+  </div>
 
             {/* Toggle Button for mobile */}
-         
+            <button onClick={toggleMenu} className="md:hidden p-2 text-black">
+              <i className="fa fa-bars"></i> {/* Hamburger menu icon */}
+            </button>
           </div>
 
         </div>

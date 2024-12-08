@@ -4,13 +4,8 @@ import { Josefin_Sans } from "next/font/google";
 import Header from "./components/Header/page";
 import Footer from "./components/Footer/page";
 import "./globals.css";
-import FeaturedProducts from "./components/FeatureProduct/page";
-// import ProductDisplay from "./components/LeatestProducts/page";
-import LatestProducts from "./components/LatestProducts/page";
-import TrendingProducts from "./components/TrendingProducts/page";
-import DiscountItem from "./components/DiscountItems/page";
-import TopCategories from "./components/TopCategories/page";
-import LeatestBlog from "./components/LeatestBlog/page";
+import Navbar from "./components/NavBar/page";
+
 // import ShopexOffers from "./components/ShopexOffer.tsx/page";
 
 
@@ -43,13 +38,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${josefin_Sans.className}`}
       >
         <Header/>
+        <Navbar/>
         {children}
-        <FeaturedProducts/>
-        <LatestProducts/>
-        <TrendingProducts/>
-        <DiscountItem/>
-        <TopCategories/>
-        <LeatestBlog/>
+  
         <Footer/>
       </body>
     </html>
