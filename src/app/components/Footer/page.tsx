@@ -6,7 +6,7 @@ import Link from "next/link"
 
 function Footer() {
   return (
-    <div className=''>
+    <div className='bg-[#EEEFFB]'>
         <footer className="text-gray-600 body-font ">
   <div className="container px-5 py-24 mx-auto mt-[40px]">
     <div className="flex flex-wrap md:text-left lg:text-left text-center order-first">
